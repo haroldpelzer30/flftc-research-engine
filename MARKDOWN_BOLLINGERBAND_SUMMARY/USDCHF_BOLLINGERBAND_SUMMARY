@@ -1,0 +1,432 @@
+# USDCHF H4 Bollinger Band Research Summary
+
+## Research Objective
+
+This phase of the project tested whether **volatility expansion (Bollinger Bands)** can identify reliable mean-reversion opportunities on USDCHF and how those results compare to the RSI chapter.
+
+All studies used:
+
+* USDCHF
+* H4 Timeframe
+* Bollinger Bands (20,2)
+
+---
+
+# 1. Bollinger Band Alone
+
+## Signal Count
+
+| Signal Type | Count |
+|------------|-------:|
+| Lower Band Signals | 662 |
+| Upper Band Signals | 586 |
+| Total Signals | 1,248 |
+
+## Results
+
+### Lower Band Reversal
+
+| Horizon | Win Rate |
+|----------|----------:|
+| 1 Candle | 52.42% |
+| 3 Candles | 51.66% |
+| 6 Candles | 51.96% |
+
+### Upper Band Reversal
+
+| Horizon | Win Rate |
+|----------|----------:|
+| 1 Candle | 53.75% |
+| 3 Candles | 49.66% |
+| 6 Candles | 53.75% |
+
+## Conclusion
+
+Best standalone Bollinger Band result among the forex pairs tested so far.
+
+However:
+
+* Win rates remained modest.
+* Average returns remained very small.
+* Failed to outperform RSI Alone.
+
+---
+
+# 2. Bollinger Band + Daily Structure
+
+## Signal Count
+
+| Signal Type | Count |
+|------------|-------:|
+| Bullish Signals | 81 |
+| Bearish Signals | 69 |
+| Total Signals | 150 |
+
+## Results
+
+### Bullish
+
+| Horizon | Win Rate |
+|----------|----------:|
+| 1 Candle | 50.62% |
+| 3 Candles | 53.09% |
+| 6 Candles | 53.09% |
+
+### Bearish
+
+| Horizon | Win Rate |
+|----------|----------:|
+| 1 Candle | 50.72% |
+| 3 Candles | 52.17% |
+| 6 Candles | 53.62% |
+
+## Conclusion
+
+Unlike EURUSD and GBPUSD, Daily Structure provided almost no improvement.
+
+Opportunity count collapsed:
+
+```text
+1248
+↓
+150
+```
+
+while win rates remained essentially unchanged.
+
+---
+
+# 3. Bollinger Band + Double Bottom / Double Top
+
+## Signal Count
+
+| Signal Type | Count |
+|------------|-------:|
+| Bullish Double Bottom Signals | 305 |
+| Bearish Double Top Signals | 297 |
+| Total Signals | 602 |
+
+## Results
+
+### Bullish
+
+| Horizon | Win Rate |
+|----------|----------:|
+| 1 Candle | 53.44% |
+| 3 Candles | 53.11% |
+| 6 Candles | 51.48% |
+
+### Bearish
+
+| Horizon | Win Rate |
+|----------|----------:|
+| 1 Candle | 52.53% |
+| 3 Candles | 47.81% |
+| 6 Candles | 50.51% |
+
+## Conclusion
+
+Failed to improve the underlying Bollinger Band edge.
+
+Another example of:
+
+> A filter reducing opportunities without improving edge quality.
+
+---
+
+# 4. Bollinger Band + Inside Bar
+
+## Signal Count
+
+| Signal Type | Count |
+|------------|-------:|
+| Bullish Inside Bar Signals | 67 |
+| Bearish Inside Bar Signals | 66 |
+| Total Signals | 133 |
+
+## Results
+
+### Bullish
+
+| Horizon | Win Rate |
+|----------|----------:|
+| 1 Candle | 46.27% |
+| 3 Candles | 52.24% |
+| 6 Candles | 50.75% |
+
+### Bearish
+
+| Horizon | Win Rate |
+|----------|----------:|
+| 1 Candle | 57.58% |
+| 3 Candles | 56.06% |
+| 6 Candles | 65.15% |
+
+## Conclusion
+
+Highest practical BB result in the chapter.
+
+However:
+
+```text
+66 bearish signals
+```
+
+over roughly ten years.
+
+Annualized:
+
+```text
+6.6 signals per year
+```
+
+Interesting, but extremely selective.
+
+---
+
+# 5. Bollinger Band + Doji
+
+## Signal Count
+
+| Signal Type | Count |
+|------------|-------:|
+| Bullish Doji Signals | 25 |
+| Bearish Doji Signals | 32 |
+| Total Signals | 57 |
+
+## Results
+
+### Bullish
+
+| Horizon | Win Rate |
+|----------|----------:|
+| 1 Candle | 64.00% |
+| 3 Candles | 64.00% |
+| 6 Candles | 68.00% |
+
+### Bearish
+
+| Horizon | Win Rate |
+|----------|----------:|
+| 1 Candle | 50.00% |
+| 3 Candles | 43.75% |
+| 6 Candles | 56.25% |
+
+## Conclusion
+
+Strongest headline statistic in the chapter.
+
+However:
+
+```text
+25 bullish signals
+```
+
+over roughly ten years.
+
+Annualized:
+
+```text
+2.5 signals per year
+```
+
+One opportunity approximately every:
+
+```text
+4.8 months
+```
+
+---
+
+# Final Ranking
+
+## Ranked by Practical Research Value
+
+### 🥇 Bollinger Band Alone
+
+* Best Result: 53.75%
+* Signals: 1,248
+
+Most robust BB study.
+
+---
+
+### 🥈 Bollinger Band + Double Bottom / Top
+
+* Best Result: 53.44%
+* Signals: 602
+
+Reasonable sample size with similar performance.
+
+---
+
+### 🥉 Bollinger Band + Daily Structure
+
+* Best Result: 53.62%
+* Signals: 150
+
+Large opportunity reduction with almost no improvement.
+
+---
+
+### 4th Place — Bollinger Band + Inside Bar
+
+* Best Result: 65.15%
+* Signals: 66
+
+Interesting but highly selective.
+
+---
+
+### 5th Place — Bollinger Band + Doji
+
+* Best Result: 68.00%
+* Signals: 25
+
+Strongest statistic, weakest sample size.
+
+---
+
+# Major Research Lessons
+
+## Lesson 1
+
+> **USDCHF may not generate many volatility-expansion opportunities, but when those opportunities occur they appear to be of higher quality than the more frequent opportunities found on GBPUSD.**
+
+### Evidence
+
+| Asset | Signals | Best Result |
+|---------|---------:|----------:|
+| GBPUSD BB Alone | 4,675 | 52.90% |
+| USDCHF BB Alone | 1,248 | 53.75% |
+
+This mirrors the RSI chapter almost perfectly.
+
+---
+
+## Lesson 2
+
+> **The market matters more than the indicator.**
+
+The same asset that produced one of the strongest RSI results also produced the strongest BB Alone result among the forex pairs tested.
+
+The indicator changed.
+
+The market personality did not.
+
+---
+
+## Lesson 3
+
+> **Extremely selective filters can create statistically impressive results that may have little practical value due to opportunity scarcity.**
+
+### Evidence
+
+#### BB + Inside Bar
+
+```text
+65.15%
+66 signals
+```
+
+#### BB + Doji
+
+```text
+68.00%
+25 signals
+```
+
+As selectivity increased:
+
+```text
+Signals ↓
+Win Rate ↑
+```
+
+But opportunity frequency collapsed.
+
+---
+
+## Lesson 4
+
+> **A filter should be judged not only by how much it improves win rate, but also by how many opportunities it destroys.**
+
+USDCHF provided some of the strongest examples of this lesson in the entire project.
+
+---
+
+## Lesson 5
+
+> **Win rate alone is not enough. An edge should be evaluated by both its accuracy and its payoff.**
+
+Several BB studies produced respectable win rates while generating weak or inconsistent average returns.
+
+---
+
+# Comparison vs RSI Chapter
+
+## USDCHF RSI Alone
+
+| Direction | Win Rate |
+|------------|----------:|
+| Bullish | 54.62% |
+| Bearish | 57.00% |
+
+Signals:
+
+```text
+1080
+```
+
+---
+
+## Best USDCHF BB Result
+
+### BB Alone
+
+| Direction | Win Rate |
+|------------|----------:|
+| Bearish | 53.75% |
+
+Signals:
+
+```text
+1248
+```
+
+---
+
+# Chapter Verdict
+
+The strongest conclusion from the USDCHF Bollinger Band chapter is:
+
+> **Volatility expansion contains some predictive information on USDCHF, but RSI remains the stronger, more scalable, and more robust measure of mean reversion.**
+
+While Inside Bars and Dojis produced impressive headline statistics, those results came from extremely small samples and should be treated cautiously.
+
+The chapter ultimately reinforces one of the most important findings of the entire project:
+
+> **The market matters more than the indicator.**
+
+USDCHF behaved like USDCHF regardless of whether the market was being measured through momentum (RSI) or volatility (Bollinger Bands).
+
+---
+
+# Momentum vs Volatility Scoreboard
+
+## Forex Pairs Completed
+
+| Asset | Winner |
+|---------|---------|
+| EURUSD | RSI |
+| GBPUSD | RSI |
+| USDCHF | RSI |
+
+## Current Score
+
+```text
+RSI  3
+BB   0
+```
+
+Team Bollinger Bands now needs Gold, Silver, SP500, or NAS100 to stage a comeback.
