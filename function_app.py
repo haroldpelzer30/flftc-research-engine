@@ -1,7 +1,7 @@
 import os
 import logging
 import azure.functions as func
-import psycopg2
+import psycopg
 
 app = func.FunctionApp()
 
@@ -13,14 +13,16 @@ app = func.FunctionApp()
     use_monitor=True
 )
 def flightdeck_h4_scanner(mytimer: func.TimerRequest) -> None:
+
     logging.info("========================================")
     logging.info("FLIGHTDECK H4 SCANNER STARTED")
     logging.info("========================================")
 
     try:
-        conn = psycopg2.connect(
+
+        conn = psycopg.connect(
             host=os.getenv("POSTGRES_HOST"),
-            database=os.getenv("POSTGRES_DB"),
+            dbname=os.getenv("POSTGRES_DB"),
             user=os.getenv("POSTGRES_USER"),
             password=os.getenv("POSTGRES_PASSWORD"),
             port=os.getenv("POSTGRES_PORT", "5432"),
@@ -45,41 +47,58 @@ def flightdeck_h4_scanner(mytimer: func.TimerRequest) -> None:
                 created_at
             FROM market_signals
             ORDER BY created_at DESC
-            LIMIT 10;
+            LIMIT 20
         """)
 
         signals = cursor.fetchall()
 
-        if not signals:
-            logging.info("No signals found in market_signals table.")
-        else:
-            logging.info("Signals found: %s", len(signals))
+        logging.info("Signals found: %s", len(signals))
 
-            for row in signals:
-                logging.info(
-                    "SIGNAL | %s | %s | Candle: %s | Setup: %s | "
-                    "Direction: %s | Score: %s | Tier: %s | "
-                    "Price: %s | RSI: %s | Trend: %s | Context: %s",
-                    row[0],
-                    row[1],
-                    row[2],
-                    row[3],
-                    row[4],
-                    row[5],
-                    row[6],
-                    row[7],
-                    row[8],
-                    row[9],
-                    row[10],
-                )
+        for row in signals:
+
+            logging.info(
+                """
+==================================================
+Symbol: %s
+Timeframe: %s
+Candle Time: %s
+Setup: %s
+Direction: %s
+Score: %s
+Tier: %s
+Price: %s
+RSI: %s
+Trend: %s
+Context: %s
+Created: %s
+==================================================
+                """,
+                row[0],   # symbol
+                row[1],   # timeframe
+                row[2],   # candle_time
+                row[3],   # setup
+                row[4],   # direction
+                row[5],   # score
+                row[6],   # tier
+                row[7],   # current_price
+                row[8],   # rsi
+                row[9],   # trend_state
+                row[10],  # context
+                row[11]   # created_at
+            )
 
         cursor.close()
         conn.close()
 
         logging.info("========================================")
-        logging.info("FLIGHTDECK H4 SCANNER COMPLETED SUCCESSFULLY")
+        logging.info("FLIGHTDECK H4 SCANNER COMPLETE")
         logging.info("========================================")
 
     except Exception as e:
-        logging.exception("FLIGHTDECK H4 SCANNER FAILED: %s", e)
+
+        logging.exception(
+            "FLIGHTDECK H4 SCANNER FAILED: %s",
+            str(e)
+        )
+
         raise
