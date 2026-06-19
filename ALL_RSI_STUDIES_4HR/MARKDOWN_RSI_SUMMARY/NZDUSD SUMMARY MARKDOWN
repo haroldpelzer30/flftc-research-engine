@@ -1,0 +1,238 @@
+# NZDUSD H4 RSI Research Summary
+
+## Asset Overview
+
+**Asset:** NZDUSD
+**Timeframe:** H4
+**Research Framework:** RSI Mean Reversion Studies
+**Evaluation Horizons:** 1, 3, and 6 H4 Candles (4–24 Hours)
+
+---
+
+# Study 1: RSI Alone
+
+## Signal Count
+
+* Oversold Signals: 1,648
+* Overbought Signals: 1,695
+* Total Signals: 3,343
+
+## Results
+
+### Oversold
+
+| Holding Period | Win Rate |
+| -------------- | -------- |
+| 1 Candle       | 51.58%   |
+| 3 Candles      | 50.30%   |
+| 6 Candles      | 50.79%   |
+
+### Overbought
+
+| Holding Period | Win Rate |
+| -------------- | -------- |
+| 1 Candle       | 52.68%   |
+| 3 Candles      | 52.86%   |
+| 6 Candles      | 50.44%   |
+
+## Key Takeaway
+
+NZDUSD generated a large number of RSI opportunities but displayed only a modest mean-reversion edge.
+
+---
+
+# Study 2: RSI + Daily Structure
+
+## Signal Count
+
+* Bullish Signals: 308
+* Bearish Signals: 332
+* Total Signals: 640
+
+## Results
+
+### Bullish
+
+| Holding Period | Win Rate |
+| -------------- | -------- |
+| 1 Candle       | 50.00%   |
+| 3 Candles      | 50.00%   |
+| 6 Candles      | 52.92%   |
+
+### Bearish
+
+| Holding Period | Win Rate |
+| -------------- | -------- |
+| 1 Candle       | 53.31%   |
+| 3 Candles      | 51.20%   |
+| 6 Candles      | 46.08%   |
+
+## Key Takeaway
+
+Daily Structure reduced opportunities by roughly 81% while producing only a marginal improvement over RSI Alone.
+
+---
+
+# Study 3: RSI + Double Bottom / Double Top
+
+## Signal Count
+
+* Bullish Signals: 595
+* Bearish Signals: 660
+* Total Signals: 1,255
+
+## Results
+
+### Bullish
+
+| Holding Period | Win Rate |
+| -------------- | -------- |
+| 1 Candle       | 49.75%   |
+| 3 Candles      | 48.24%   |
+| 6 Candles      | 49.41%   |
+
+### Bearish
+
+| Holding Period | Win Rate |
+| -------------- | -------- |
+| 1 Candle       | 54.70%   |
+| 3 Candles      | 54.09%   |
+| 6 Candles      | 49.55%   |
+
+## Key Takeaway
+
+The bearish side improved modestly, but the bullish side deteriorated significantly and long-term performance remained weak.
+
+---
+
+# Study 4: RSI + Inside Bar
+
+## Signal Count
+
+* Bullish Signals: 281
+* Bearish Signals: 272
+* Total Signals: 553
+
+## Results
+
+### Bullish
+
+| Holding Period | Win Rate |
+| -------------- | -------- |
+| 1 Candle       | 57.30%   |
+| 3 Candles      | 49.11%   |
+| 6 Candles      | 54.80%   |
+
+### Bearish
+
+| Holding Period | Win Rate |
+| -------------- | -------- |
+| 1 Candle       | 54.41%   |
+| 3 Candles      | 52.57%   |
+| 6 Candles      | 49.26%   |
+
+## Key Takeaway
+
+This produced the strongest NZDUSD result observed, although performance varied significantly across holding periods and opportunities were reduced by roughly 83%.
+
+---
+
+# Study 5: RSI + Weekly Structure
+
+## Signal Count
+
+* Bullish Signals: 199
+* Bearish Signals: 228
+* Total Signals: 427
+
+## Results
+
+### Bullish
+
+| Holding Period | Win Rate |
+| -------------- | -------- |
+| 1 Candle       | 46.23%   |
+| 3 Candles      | 46.73%   |
+| 6 Candles      | 40.70%   |
+
+### Bearish
+
+| Holding Period | Win Rate |
+| -------------- | -------- |
+| 1 Candle       | 54.39%   |
+| 3 Candles      | 49.56%   |
+| 6 Candles      | 50.88%   |
+
+## Key Takeaway
+
+Weekly Structure dramatically reduced opportunities while producing poor bullish performance and inconsistent bearish performance.
+
+---
+
+# Final Ranking
+
+| Rank | Strategy                  | Best Result | Signals |
+| ---- | ------------------------- | ----------: | ------: |
+| 🥇   | RSI + Inside Bar          |      57.30% |     553 |
+| 🥈   | RSI + Double Bottom / Top |      54.70% |   1,255 |
+| 🥉   | RSI + Weekly Structure    |      54.39% |     427 |
+| 4    | RSI + Daily Structure     |      53.31% |     640 |
+| 5    | RSI Alone                 |      52.86% |   3,343 |
+
+---
+
+# Major Findings
+
+### Finding 1
+
+NZDUSD behaved remarkably similarly to AUDUSD.
+
+Both assets:
+
+* Generated more than 3,000 RSI signals.
+* Produced relatively modest edges.
+* Responded poorly to most additional filters.
+
+---
+
+### Finding 2
+
+Adding filters consistently reduced opportunity count.
+
+Most filters eliminated 60–87% of available opportunities while producing only modest improvements in win rate.
+
+---
+
+### Finding 3
+
+The strongest result came from RSI + Inside Bar, but the improvement was not consistent across holding periods.
+
+This raises the possibility that the result may be horizon-specific rather than a robust market inefficiency.
+
+---
+
+### Finding 4
+
+Weekly Structure once again failed to demonstrate meaningful predictive value.
+
+This provides additional support for the working hypothesis that weekly highs and lows may be too distant to influence H4 reversals occurring over a 12–24 hour horizon.
+
+---
+
+# NZDUSD Conclusion
+
+NZDUSD generated a large number of opportunities but exhibited only modest mean-reversion behavior.
+
+The strongest result observed was:
+
+**RSI + Inside Bar (Bullish 1-Candle): 57.30%**
+
+However, the broader body of evidence suggests that most filters reduced opportunity count substantially while providing limited and inconsistent improvements in predictive performance.
+
+NZDUSD reinforces several major project themes:
+
+* Opportunity count does not equal edge quality.
+* Added complexity frequently reduces scalability more than it improves edge quality.
+* Location may matter more than pattern recognition.
+* Weekly Structure appears to provide little value for H4 reversal studies.
+* Widely accepted trading concepts often fail to materially improve results when rigorously tested.
