@@ -1,5 +1,2 @@
 azure-functions
-pandas
-requests
-psycopg2-binary
-python-dotenv
+psycopg[binary]==3.2.9
