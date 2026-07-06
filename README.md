@@ -1,4 +1,3 @@
-@'
 # FlightDeck Forex Market Intelligence Platform
 
 ## Overview
