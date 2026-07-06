@@ -1,3 +1,4 @@
+@'
 # FlightDeck Forex Market Intelligence Platform
 
 ## Overview
@@ -20,12 +21,12 @@ The platform scans multiple forex markets every four hours, calculates technical
 
 ---
 
-## Current Workflow
+## System Architecture
 
 ```text
-MT5 Market Data
+MetaTrader 5
     ↓
-Python Market Scanner
+Python Scanner
     ↓
 PostgreSQL Database
     ↓
@@ -34,51 +35,3 @@ Signal Scoring Engine
 Telegram Alerts
     ↓
 Power BI Dashboard
-```
-
----
-
-## Features
-
-- Automated market scans every 4 hours
-- Cloud-hosted deployment on Windows VPS
-- PostgreSQL data storage and retrieval
-- Telegram alert delivery
-- Historical win-rate scoring
-- DXY market context integration
-- Power BI reporting and visualization
-- Multi-asset market monitoring
-
----
-
-## Live Production Status
-
-✅ Running in production on a cloud-hosted VPS
-
-✅ Automated scans executing every 4 hours
-
-✅ PostgreSQL database updating automatically
-
-✅ Telegram alerts delivering successfully
-
-✅ Power BI connected to live market data
-
----
-
-## Project Objectives
-
-- Transform raw market data into actionable market intelligence
-- Automate market research workflows
-- Track historical strategy performance
-- Create scalable reporting and dashboard solutions
-- Demonstrate practical applications of Python, SQL, cloud infrastructure, and data analytics
-
----
-
-## Future Enhancements
-
-- Automated Power BI refresh scheduling
-- Additional market scanners
-- Stock market intelligence platform integration
-- Advanced dashboarding and analytics
-- Web-based reporting portal
