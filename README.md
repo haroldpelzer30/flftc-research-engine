@@ -1,229 +1,84 @@
-# flftc-research-engine
-# FLFTC Research Engine
+# FlightDeck Forex Market Intelligence Platform
 
 ## Overview
 
-The FLFTC Research Engine is a quantitative market research project designed to identify, test, and document market inefficiencies across multiple asset classes using historical data and standardized testing methodologies.
+FlightDeck is an automated market intelligence platform built using Python, PostgreSQL, MetaTrader 5, Telegram, Power BI, and a cloud-hosted Windows VPS.
 
-The objective is not to find a perfect trading strategy. The objective is to build a research database of verified market behaviors and statistically tested market concepts.
-
-This project serves both as:
-
-* A quantitative market research platform
-* A data analytics portfolio project
-
----
-
-## Research Objectives
-
-1. Identify repeatable market behaviors across asset classes.
-2. Compare momentum, volatility, price action, trend-following, and breakout concepts.
-3. Measure statistical edge using standardized win-rate and return metrics.
-4. Build a scalable research framework capable of testing new ideas rapidly.
-5. Develop practical skills in data analytics, Python, databases, and research automation.
-
----
-
-## Markets Tested
-
-### Forex
-
-* EURUSD
-* GBPUSD
-* USDCHF
-* AUDUSD
-* NZDUSD
-* USDCAD
-* USDJPY
-
-### Metals
-
-* XAUUSD (Gold)
-
-### Equity Indices
-
-* SP500
-* NAS100
-
----
-
-## Research Methodology
-
-All studies are performed using:
-
-* H4 (4-Hour) timeframe
-* Standardized forward-looking performance windows
-
-  * 1 Candle
-  * 3 Candles
-  * 6 Candles
-* Historical OHLCV market data stored in DuckDB
-* Python-based research scripts
-
-Performance is measured using:
-
-* Win Rate
-* Signal Frequency
-* Average Return
-* Opportunity Cost
-* Scalability
-
----
-
-# Phase 1: Momentum vs Volatility
-
-## Momentum Research
-
-### RSI Studies
-
-* RSI Alone
-* RSI + Daily Structure
-* RSI + Double Bottom / Top
-* RSI + Inside Bar
-* RSI + Doji
-
-## Volatility Research
-
-### Bollinger Band Studies
-
-* Bollinger Bands Alone
-* Bollinger Bands + Daily Structure
-* Bollinger Bands + Double Bottom / Top
-* Bollinger Bands + Inside Bar
-* Bollinger Bands + Doji
-
----
-
-## Momentum vs Volatility Results
-
-### Final Score
-
-RSI: 8
-
-Bollinger Bands: 2
-
-### Major Findings
-
-* The market matters more than the indicator.
-* Location matters more than volatility.
-* Complexity often reduced opportunity frequency without improving performance enough to justify the loss.
-* Strong edges generally occurred between 55% and 64%, not 70%+.
-* Robust market inefficiencies often appear as small but repeatable advantages.
-
-### Research Quotes
-
-> Don't fall in love with indicators. Fall in love with evidence.
-
-> Volatility identifies opportunities. Location determines whether those opportunities matter.
-
-> The edge was never inside the indicator. The edge was inside the market.
-
----
-
-# Phase 2: Price Action Research
-
-## Current Studies
-
-* Daily High / Low Sweeps
-* Double Bottom / Double Top
-* Pin Bars
-* Engulfing Patterns
-* Inside Bars
-
-Status:
-
-In Progress
-
----
-
-# Phase 3: Trend Following Research
-
-Planned Studies
-
-* 50 EMA / 50 SMA Cross
-* 50 EMA / 200 EMA Cross
-* 20 EMA Pullback
-* 200 EMA Trend Filter
-* Higher High / Higher Low Structure
-
-Status:
-
-Planned
-
----
-
-# Phase 4: Breakout Research
-
-Planned Studies
-
-* Daily Breakouts
-* Weekly Breakouts
-* London Session Breakouts
-* New York Session Breakouts
-* Range Breakouts
-
-Status:
-
-Planned
-
----
-
-# Phase 5: Options Research
-
-Planned Studies
-
-* Covered Calls
-* Cash-Secured Puts
-* Long Calls
-* Vertical Spreads
-* LEAPS
-
-Status:
-
-Planned
+The platform scans multiple forex markets every four hours, calculates technical indicators, scores trade setups using research-backed probabilities, stores results in PostgreSQL, and delivers automated alerts through Telegram.
 
 ---
 
 ## Technology Stack
 
-* Python
-* DuckDB
-* Pandas
-* Git
-* GitHub
-* Azure
-* VS Code / GitHub Codespaces
+- Python
+- PostgreSQL
+- MetaTrader 5
+- Telegram Bot API
+- Power BI
+- Windows VPS
+- GitHub
 
 ---
 
-## Repository Structure
+## Current Workflow
 
 ```text
-flftc-research-engine/
-
-├── scripts/
-├── reports/
-├── data/
-├── research/
-├── README.md
-└── requirements.txt
+MT5 Market Data
+    ↓
+Python Market Scanner
+    ↓
+PostgreSQL Database
+    ↓
+Signal Scoring Engine
+    ↓
+Telegram Alerts
+    ↓
+Power BI Dashboard
 ```
 
 ---
 
-## Author
+## Features
 
-Harold Pelzer
+- Automated market scans every 4 hours
+- Cloud-hosted deployment on Windows VPS
+- PostgreSQL data storage and retrieval
+- Telegram alert delivery
+- Historical win-rate scoring
+- DXY market context integration
+- Power BI reporting and visualization
+- Multi-asset market monitoring
 
-Business Analytics Student
+---
 
-Drexel University
+## Live Production Status
 
-U.S. Army Veteran
+✅ Running in production on a cloud-hosted VPS
 
-Founder, Financial Literacy For The Culture (FLFTC)
+✅ Automated scans executing every 4 hours
 
-Fly Guy Analyst
+✅ PostgreSQL database updating automatically
 
-Turning Market Data Into Market Intelligence
+✅ Telegram alerts delivering successfully
 
+✅ Power BI connected to live market data
+
+---
+
+## Project Objectives
+
+- Transform raw market data into actionable market intelligence
+- Automate market research workflows
+- Track historical strategy performance
+- Create scalable reporting and dashboard solutions
+- Demonstrate practical applications of Python, SQL, cloud infrastructure, and data analytics
+
+---
+
+## Future Enhancements
+
+- Automated Power BI refresh scheduling
+- Additional market scanners
+- Stock market intelligence platform integration
+- Advanced dashboarding and analytics
+- Web-based reporting portal
